@@ -29,6 +29,6 @@ public class ContactMessage {
     @Column(nullable = false, length = 2000)
     private String message;
 
-    @Column(nullable = false)
+    @Column(nullable = false, updatable = false, columnDefinition = "DATETIME")
     private LocalDateTime createdAt;
 }
